@@ -1,0 +1,22 @@
+# Spaces and indentation are important in YAML, similar to Python. To distinguish between documents we use --- and the ending is mentioned with ...
+
+# Implicit key-value pairs on a single line
+
+---
+github: this is basics
+1: "hashmaps in yaml file"
+list:
+  - apple 
+  - mango
+
+---
+cities:
+  - New Delhi
+  - Kolkata
+---
+cities: [newdelhi, mumbai, jadavpur]
+---
+# key value pair:-
+{mango: "new fruit", json: "very helpful in server scaling"}
+
+...

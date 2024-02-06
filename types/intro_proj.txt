@@ -1,0 +1,1 @@
+This is the folder that contains the way we could write the same file on a simple school data adnd write it on Json, xml as well as Yaml file.

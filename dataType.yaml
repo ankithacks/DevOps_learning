@@ -1,0 +1,124 @@
+name: github
+test: "kubernetes"
+job: 'testing tree'
+bio: |
+  hey there it worked fine in deploying the clusters in the 
+  pipeloine using argoCd
+
+# write a single line in multiple lines
+message: >
+  this will
+  all be written
+  in a single line 
+  same as:- this will all be written in a single line
+
+number: 39634
+marks: 98.45
+boolen: No #n , N, false, False, FALSE
+
+# specify the types:-
+zero: !!int 0
+positiveNumber: !!int 45
+negativeNumber: !!int -45
+binaryNum: !!int 01011
+octalNum: !!int 05968
+hexa: !!int 0x45
+commaValue: !!int +540000
+exponents: 6.456E
+
+# floating points:-
+mark: !!float 56.89
+inifinit: !!float .inf
+not a num: .nan 
+test1: !!bool false
+msg: !!str "hello in the strict world of Yaml files"
+
+# null values:-
+surname: !!null Null
+
+# dates and times can also be added:-
+date: !!timestamp 2003-02-20
+india time: 2001-12-04T02:50:45:10 +5:30
+
+
+# advanced datatypes:-
+student: !!seq
+  - marks1
+  - name
+  - roll_no
+
+# spme of the key sequences may be empty knwn as sparse sequence
+sparse seq:
+  - hey 
+  - how
+  - 
+  - NULL
+  
+# nested sequence:=
+fruits:
+  - name: apple
+    color: red
+    taste: sweet
+  - name: banana
+    color: yellow
+    taste: sweet
+  - name: orange
+    color: orange
+    taste: citrus
+
+# key-value pairs are called maps:-
+person:
+  name: John Doe
+  age: 30
+  address:
+    street: 123 Main St
+    city: Anytown
+    country: USA
+
+# nested maps:-map within a map
+type:
+  name1: Github
+  role:
+    age: 78
+    type: gitOps
+# same as:-\
+name2: GitHub
+role: { age: 78, type: GitOps }
+
+# pairs: keys having duplicate values
+pair example: !!pairs 
+  - type: GitHub
+  - designation: Yaml File 
+# same as:-  pair example: !!pair [job: student, designation: teacher ]
+
+
+# set will allow you to have only unique values
+names: !!set 
+  ? github
+  ? devops
+  ? yaml file
+
+# dictionary datatype:-
+People : !!omap 
+  - name :
+      type: devops
+      designation: engineering
+      standard: web developer
+  - CiCd :
+      type: AWS
+      designation: engineering
+
+# reuseabiity of some of the properties USING ANCHORS:-
+likings: &base
+  fav fruit: mango
+  dislikes: apple
+person1: 
+  name: person1
+  <<: *base
+person2:
+  name2: person2
+  <<: *base
+person3: 
+  name3: person3
+  <<: *base
+  dislikes: Grapes

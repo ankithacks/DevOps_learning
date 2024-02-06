@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<School name="new School" principal="Someone">
+    <Students>
+        <Student>
+            <rno>1133</rno>
+            <name>Github</name>
+            <marks>992</marks>
+        </Student>
+    </Students>
+</School>

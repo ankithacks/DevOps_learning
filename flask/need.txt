@@ -1,0 +1,3 @@
+docker build -t ankit608/flask-python:0.0.1.RELEASE .
+docker container run -d -p 3000:3000 ankit608/flask-python:0.0.1.RELEASE
+note that the first port is my machine port while the next one is image port

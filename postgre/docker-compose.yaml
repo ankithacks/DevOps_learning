@@ -1,0 +1,12 @@
+version: "3"
+services: 
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: github
+      POSTGRES_USER: github
+      POSTGRES_DB: github123
+  app:
+    image: my-postgres-app
+    ports:
+      - 13000:3000

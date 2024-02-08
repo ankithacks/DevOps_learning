@@ -1,0 +1,7 @@
+npm install express pg nodemon
+//docker CLI:-
+docker build -t my-postgres-app .
+docker compose up
+docker tag my-postgres-app:latest ankit608/my-postgres-app:latest
+docker login
+docker push ankit608/my-postgres-app:latest
